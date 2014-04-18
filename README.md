@@ -1,0 +1,2 @@
+Locatamator-AllJoyn
+===================
