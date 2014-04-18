@@ -1,0 +1,17 @@
+<xml>
+    <node name="org/alljoyn/Bus/sample">
+        <annotation name="org.alljoyn.lang.objc" value="SampleObject"/>
+        <interface name="org.alljoyn.bus.sample">
+            <annotation name="org.alljoyn.lang.objc" value="SampleObjectDelegate"/>
+            <method name="Concatentate">
+                <arg name="str1" type="s" direction="in">
+                    <annotation name="org.alljoyn.lang.objc" value="concatenateString:"/>
+                </arg>
+                <arg name="str2" type="s" direction="in">
+                    <annotation name="org.alljoyn.lang.objc" value="withString:"/>
+                </arg>
+                <arg name="outStr" type="s" direction="out"/>
+            </method>
+        </interface>
+    </node>
+</xml>
