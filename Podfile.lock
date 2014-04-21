@@ -1,0 +1,13 @@
+PODS:
+  - FlatUIKit (1.3)
+  - OpenSSL (1.0.1)
+
+DEPENDENCIES:
+  - FlatUIKit (~> 1.3)
+  - OpenSSL (~> 1.0)
+
+SPEC CHECKSUMS:
+  FlatUIKit: 3b32b52bb3c266477709cfe4812ab2c877ae942b
+  OpenSSL: 9b85178853701b1e9bbf70df695a4c149799e772
+
+COCOAPODS: 0.32.1
