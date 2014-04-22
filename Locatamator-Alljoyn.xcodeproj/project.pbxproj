@@ -54,6 +54,7 @@
 		9DDE0F4818F887C600BAE073 /* SampleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE0F4618F887C600BAE073 /* SampleObject.m */; };
 		9DDE0F4A18F88ED500BAE073 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDE0F4918F88ED500BAE073 /* SystemConfiguration.framework */; };
 		9DDE0F4C18F88EE300BAE073 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDE0F4B18F88EE300BAE073 /* libstdc++.dylib */; };
+		C69C20A46207473CAE95CB83 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5757BC44128B432E890515DD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B8FD4A4FEFB470F9C0B32E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		5757BC44128B432E890515DD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D35CD5A18FFDC9E001228EC /* AJNAuthenticationListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJNAuthenticationListener.h; sourceTree = "<group>"; };
 		9D35CD5B18FFDC9E001228EC /* AJNAuthenticationListenerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJNAuthenticationListenerImpl.h; sourceTree = "<group>"; };
 		9D35CD5C18FFDC9E001228EC /* AJNAuthenticationListenerImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AJNAuthenticationListenerImpl.mm; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 				9D7A2CC318F8124300E880D7 /* CoreData.framework in Frameworks */,
 				9D7A2CC118F8124300E880D7 /* UIKit.framework in Frameworks */,
 				9D7A2CBD18F8124300E880D7 /* Foundation.framework in Frameworks */,
+				C69C20A46207473CAE95CB83 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +266,7 @@
 				9D7A2CE118F8124400E880D7 /* Locatamator-AlljoynTests */,
 				9D7A2CBB18F8124300E880D7 /* Frameworks */,
 				9D7A2CBA18F8124300E880D7 /* Products */,
+				2B8FD4A4FEFB470F9C0B32E1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +290,7 @@
 				9D7A2CC018F8124300E880D7 /* UIKit.framework */,
 				9D7A2CC218F8124300E880D7 /* CoreData.framework */,
 				9D7A2CDA18F8124400E880D7 /* XCTest.framework */,
+				5757BC44128B432E890515DD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,9 +366,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D7A2CEB18F8124400E880D7 /* Build configuration list for PBXNativeTarget "Locatamator-Alljoyn" */;
 			buildPhases = (
+				C804BFD7F6894942B60C45F3 /* Check Pods Manifest.lock */,
 				9D7A2CB518F8124300E880D7 /* Sources */,
 				9D7A2CB618F8124300E880D7 /* Frameworks */,
 				9D7A2CB718F8124300E880D7 /* Resources */,
+				A2C8FADDAF82426B8CAC4A9B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,6 +455,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2C8FADDAF82426B8CAC4A9B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C804BFD7F6894942B60C45F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D7A2CB518F8124300E880D7 /* Sources */ = {
@@ -598,6 +639,7 @@
 		};
 		9D7A2CEC18F8124400E880D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8FD4A4FEFB470F9C0B32E1 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -626,7 +668,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Locatamator-Alljoyn/alljoyn-sdk/darwin/$(CURRENT_ARCH)/$(PLATFORM_NAME)/$(CONFIGURATION)/dist/cpp/lib\"",
-					"\"$(SRCROOT)/Locatamator-Alljoyn/openssl/build/$(CONFIGURATION)-$(PLATFORM_NAME)\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -649,6 +690,7 @@
 		};
 		9D7A2CED18F8124400E880D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8FD4A4FEFB470F9C0B32E1 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -677,7 +719,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Locatamator-Alljoyn/alljoyn-sdk/darwin/$(CURRENT_ARCH)/$(PLATFORM_NAME)/$(CONFIGURATION)/dist/cpp/lib\"",
-					"\"$(SRCROOT)/Locatamator-Alljoyn/openssl/build/$(CONFIGURATION)-$(PLATFORM_NAME)\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
